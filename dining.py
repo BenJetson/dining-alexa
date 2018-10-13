@@ -44,42 +44,56 @@ class Station:
 
 CORE        = "https://clemson.campusdish.com/LocationsAndMenus/FreshFoodCompany"
 SCHILLETTER = "https://clemson.campusdish.com/LocationsAndMenus/SchilletterDiningHall"
+INFILE      = "lunch.html"
 
 # Fetch and parse the webpage, either from the internet or locally if testing
 
-web = False
+ONLINE = False
 
-page = None
+url = CORE if ONLINE else INFILE
 
-if web:
-    http = httplib2.Http()
-    status, response = http.request(CORE)
+if not ONLINE:
+    print("\n***RUNNING OFFLINE***\n")
 
-    page = BeautifulSoup(response, features="lxml")
-else:
-    with open("lunch.html") as response:
-        page = BeautifulSoup(response, features="lxml")
-
-
-# Create Station objects
-
-stations_html = page.select("div.menu__station")
-stations = []
-
-
-for html in stations_html:
+def fetch_page(url):
     
-    name = html.select_one("h2.location-headers").get_text()
+    try:
+        # Check for HTTP in string, throws exception if not there
+        url.index("http")
 
-    items_html = html.select("div.menu__category a.viewItem")
-    items = []
+        http = httplib2.Http()
+        status, response = http.request(url)
+        return response
+    except ValueError:
+        return open(url)
 
-    for item in items_html:
-        items.append(item.get_text())
+
+def parse_stations(input):
+
+    page = BeautifulSoup(input, features="lxml")
+
+    stations_html = page.select("div.menu__station")
+    stations = []
+
+
+    for html in stations_html:
         
-    stations.append(Station(name, items))
+        name = html.select_one("h2.location-headers").get_text()
+
+        items_html = html.select("div.menu__category a.viewItem")
+        items = []
+
+        for item in items_html:
+            items.append(item.get_text())
+            
+        stations.append(Station(name, items))
+
+    return stations
+
 
 ## print out data for testing purposes
+
+stations = parse_stations(fetch_page(url))
 
 for station in stations:
     print(station.speak())
