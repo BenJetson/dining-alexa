@@ -1,4 +1,4 @@
-import urllib
+import httplib2
 from bs4 import BeautifulSoup
 
 class Station:
@@ -7,9 +7,12 @@ class Station:
         self.name = name
         self.items = items
 
-with open("lunch.html") as webpage:
-    page = BeautifulSoup(webpage, features="lxml")
+CORE = "https://clemson.campusdish.com/LocationsAndMenus/FreshFoodCompany"
 
+http = httplib2.Http()
+status, response = http.request(CORE)
+
+page = BeautifulSoup(response, features="lxml")
 
 stations_html = page.select("div.menu__station")
 stations = []
