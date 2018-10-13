@@ -32,7 +32,7 @@ for i in range(0, len(stations_html)):
         
     stations.append(Station(name, items))
 
-## print out data
+## print out data for testing purposes
 for station in stations:
     print("\n---- Station {} ----".format(station.name))
     for item in station.items:
