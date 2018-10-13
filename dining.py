@@ -7,12 +7,35 @@ class Station:
         self.name = name
         self.items = items
 
+    def speak(self):
+
+        output = "Today, the {} is serving ".format(self.name)
+
+        for i in range(0, len(self.items)):
+            output += self.items[i]
+
+            if (i != len(self.items) - 1):
+                output += ", "
+        
+        return output
+
+        
+
 CORE = "https://clemson.campusdish.com/LocationsAndMenus/FreshFoodCompany"
 
-http = httplib2.Http()
-status, response = http.request(CORE)
+web = False
 
-page = BeautifulSoup(response, features="lxml")
+page = None
+
+if web:
+    http = httplib2.Http()
+    status, response = http.request(CORE)
+
+    page = BeautifulSoup(response, features="lxml")
+else:
+    with open("lunch.html") as response:
+        page = BeautifulSoup(response, features="lxml")
+
 
 stations_html = page.select("div.menu__station")
 stations = []
@@ -34,7 +57,7 @@ for i in range(0, len(stations_html)):
 
 ## print out data for testing purposes
 for station in stations:
-    print("\n---- Station {} ----".format(station.name))
-    for item in station.items:
-        print(" + ", item)
+    print(station.speak())
+
+
 
