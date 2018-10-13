@@ -52,7 +52,7 @@ class Station:
         "Dessert": "dessert",
         "Entree Station": "entree",
         "Grill": "grill",
-        "Lite-sy Corner": "litesycorner",
+        "Lite-sy Corner": "litesy",
         "Mongolian Grill": "mongolian",
         "Pasta": "pasta",
         "Pizza": "pizza",
@@ -87,9 +87,9 @@ class Station:
     def speak(self):
 
         if self.value == "salad" or self.value == "deli":
-            return "Today, the {} is available per usual.".format(self.name)
+            return "the {} is available per usual... ".format(self.name)
 
-        output = "Today, the {} is serving ".format(self.name)
+        output = "the {} is serving ".format(self.name)
 
         for i in range(0, len(self.items)):
             output += self.items[i]
@@ -101,7 +101,7 @@ class Station:
             elif (i != len(self.items) - 1):
                 output += ", "
         
-        output += "."
+        output += "... "
 
         return output
 
@@ -109,16 +109,17 @@ class Station:
 
 CORE        = "https://clemson.campusdish.com/LocationsAndMenus/FreshFoodCompany"
 SCHILLETTER = "https://clemson.campusdish.com/LocationsAndMenus/SchilletterDiningHall"
-INFILE      = "lunch.html"
+INFILE_CORE = "lunch.html"
+INFILE_SCH  = "sch-lunch.html"
 
 # Fetch and parse the webpage, either from the internet or locally if testing
 
-ONLINE = True
+ONLINE = False
 
-url = CORE if ONLINE else INFILE
+# url = CORE if ONLINE else INFILE
 
-if not ONLINE:
-    print("\n***RUNNING OFFLINE***\n")
+# if not ONLINE:
+#     print("\n***RUNNING OFFLINE***\n")
 
 def fetch_page(url):
     
@@ -158,10 +159,10 @@ def parse_stations(input):
 
 ## print out data for testing purposes
 
-stations = parse_stations(fetch_page(url))
+# stations = parse_stations(fetch_page(url))
 
-for station in stations:
-    print(station.speak())
+# for station in stations:
+#     print(station.speak())
 
 
 
