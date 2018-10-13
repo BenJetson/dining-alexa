@@ -1,0 +1,14 @@
+httplib2-0.11.3.dist-info/DESCRIPTION.rst,sha256=DRPqTV-4XBCadZjkadUf_1ZUyeV2PPdPe20fIF49m1Q,1250
+httplib2-0.11.3.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+httplib2-0.11.3.dist-info/METADATA,sha256=nkzDian730eSi82j16HSrF9xnGwxNXNSigAIsrMSCgY,2197
+httplib2-0.11.3.dist-info/RECORD,,
+httplib2-0.11.3.dist-info/WHEEL,sha256=0mO7-aKM6K9CHeURc5NDYZyLWH5lmR-r4TtPinHxz7Y,93
+httplib2-0.11.3.dist-info/metadata.json,sha256=3fK1SunNTFpG7DKNyMYfxelTWK9sZ6jtN_sH3NxIupE,1015
+httplib2-0.11.3.dist-info/top_level.txt,sha256=BEY8ChKwagUWmu9x8yN9JObJpZKNeWCr1E-sIECb56I,9
+httplib2/__init__.py,sha256=vv-D7FLE7SSx54IysLpoMpZaPGO7Bn-R_wwJcCsgwjo,66222
+httplib2/__pycache__/__init__.cpython-36.pyc,,
+httplib2/__pycache__/iri2uri.cpython-36.pyc,,
+httplib2/__pycache__/socks.cpython-36.pyc,,
+httplib2/cacerts.txt,sha256=AQyadVjp1sEIG0yIiMJ82l52hplPo3odJIyTSS_sONw,135547
+httplib2/iri2uri.py,sha256=8FityO2iIBdcjy1uH06EcwEYB84JJSb1yCVW_MN8u2w,3942
+httplib2/socks.py,sha256=oTeKqTiRReKNVXRULlyxhWq6qVokpsyIMTzAj7qFVgU,19001

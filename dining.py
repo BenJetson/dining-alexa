@@ -8,21 +8,86 @@ class Station:
         "Pasta": "Pasta Station",
         "Pizza": "Pizza Station",
         "Salad": "Salad Bar",
-        "Soup": "Soup Station"
+
+
+        "Local - Deli": "Deli",
+        "Local - Grill": "Grill",
+        "Local - Pizza": "Pizza Station",
+        "Local - Salad Bar": "Salad Bar",
+        "Local - Smoothie (Aramark)": "Dessert Bar",
+        "Mongolian": "Mongolian Station",
+        "Saute": "Saute Station",
+        "Soup": "Soup Station",
+        "Taste of Home": "Taste of Home Station",
+        "Vegetarian": "Vegetarian Station"
+    }
+
+    # ID_MATRIX = {
+    #     "Deli": "deli",
+    #     "Dessert": "dessert",
+    #     "Entree Station": "entree",
+    #     "Grill": "grill",
+    #     "Lite-sy Corner": "litesycorner",
+    #     "Mongolian Grill": "mongolian",
+    #     "Pasta": "pasta",
+    #     "Pizza": "pizza",
+    #     "Salad": "salad",
+
+
+    #     "Fresh Focus": "freshfocus",
+    #     "Local - Deli": "deli",
+    #     "Local - Grill": "grill",
+    #     "Local - Pizza": "pizza",
+    #     "Local - Salad Bar": "salad",
+    #     "Local - Smoothie (Aramark)": "dessert",
+    #     "Mongolian": "mongolian",
+    #     "Saute": "saute",
+    #     "Soup": "soup",
+    #     "Taste of Home": "tasteofhome",
+    #     "Vegetarian": "vegetarian"
+    # }
+    
+    VALUE_MATRIX = {
+        "Deli": "deli",
+        "Dessert": "dessert",
+        "Entree Station": "entree",
+        "Grill": "grill",
+        "Lite-sy Corner": "litesycorner",
+        "Mongolian Grill": "mongolian",
+        "Pasta": "pasta",
+        "Pizza": "pizza",
+        "Salad": "salad",
+
+
+        "Fresh Focus": "freshfocus",
+        "Local - Deli": "deli",
+        "Local - Grill": "grill",
+        "Local - Pizza": "pizza",
+        "Local - Salad Bar": "salad",
+        "Local - Smoothie (Aramark)": "dessert",
+        "Mongolian": "mongolian",
+        "Saute": "saute",
+        "Soup": "soup",
+        "Taste of Home": "tasteofhome",
+        "Vegetarian": "vegetarian"
     }
 
     def __init__(self, name, items):
         self.name = self.fix_name(name)
+        self.value = Station.VALUE_MATRIX[name.strip()]
         self.items = items
 
     def fix_name(self, name):
         if name in Station.NAME_MATRIX:
-            return Station.NAME_MATRIX[name]
+            return Station.NAME_MATRIX[name.strip()]
         
         return name
         
 
     def speak(self):
+
+        if self.value == "salad" or self.value == "deli":
+            return "Today, the {} is available per usual.".format(self.name)
 
         output = "Today, the {} is serving ".format(self.name)
 
@@ -48,7 +113,7 @@ INFILE      = "lunch.html"
 
 # Fetch and parse the webpage, either from the internet or locally if testing
 
-ONLINE = False
+ONLINE = True
 
 url = CORE if ONLINE else INFILE
 
