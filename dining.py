@@ -3,9 +3,24 @@ from bs4 import BeautifulSoup
 
 class Station:
 
+    NAME_MATRIX = {
+        "Dessert": "Dessert Bar",
+        "Pasta": "Pasta Station",
+        "Pizza": "Pizza Station",
+        "Salad": "Salad Bar",
+        "Soup": "Soup Station"
+    }
+
     def __init__(self, name, items):
-        self.name = name
+        self.name = self.fix_name(name)
         self.items = items
+
+    def fix_name(self, name):
+        if name in Station.NAME_MATRIX:
+            return Station.NAME_MATRIX[name]
+        
+        return name
+        
 
     def speak(self):
 
@@ -14,14 +29,23 @@ class Station:
         for i in range(0, len(self.items)):
             output += self.items[i]
 
-            if (i != len(self.items) - 1):
+            if (len(self.items) == 2 and i == 0):
+                output += " and "
+            elif (i == len(self.items) - 2):
+                output += ", and "
+            elif (i != len(self.items) - 1):
                 output += ", "
         
+        output += "."
+
         return output
 
-        
+# URLs for Menus   
 
-CORE = "https://clemson.campusdish.com/LocationsAndMenus/FreshFoodCompany"
+CORE        = "https://clemson.campusdish.com/LocationsAndMenus/FreshFoodCompany"
+SCHILLETTER = "https://clemson.campusdish.com/LocationsAndMenus/SchilletterDiningHall"
+
+# Fetch and parse the webpage, either from the internet or locally if testing
 
 web = False
 
@@ -37,14 +61,14 @@ else:
         page = BeautifulSoup(response, features="lxml")
 
 
+# Create Station objects
+
 stations_html = page.select("div.menu__station")
 stations = []
 
 
-for i in range(0, len(stations_html)):
+for html in stations_html:
     
-    html = stations_html[i]
-
     name = html.select_one("h2.location-headers").get_text()
 
     items_html = html.select("div.menu__category a.viewItem")
@@ -56,6 +80,7 @@ for i in range(0, len(stations_html)):
     stations.append(Station(name, items))
 
 ## print out data for testing purposes
+
 for station in stations:
     print(station.speak())
 
