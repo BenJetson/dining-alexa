@@ -39,36 +39,45 @@ def on_intent(intent_request, session):
 
         url = get_url(dining_hall)
         
-        stations = parse_stations(fetch_page(url))
+        page = fetch_page(url)
+        
+        if is_open(page):
+            stations = parse_stations(page)
 
-        output = "Today, {} has the following: ".format(dining_hall)
+            output = "Today, {} has the following: ".format(dining_hall)
 
-        for station in stations:
-            output += station.speak()
+            for station in stations:
+                output += station.speak()
 
-        return output
+            return output
+        else:
+            return CLOSED
     
     elif intent_name == "get_station_menu":
-
-        # FIXME static webpage assignment
 
         dining_hall = intent_request["intent"]["slots"]["dining_hall"]["value"]
 
         url = get_url(dining_hall)
+        
+        page = fetch_page(url)
+        
+        if is_open(page):
+            stations = parse_stations(page)
 
-        stations = parse_stations(fetch_page(url))
+            query = intent_request["intent"]["slots"]["station"]["value"]
+            print("QUERY: {}".format(query))
 
-        query = intent_request["intent"]["slots"]["station"]["value"]
-        print("QUERY: {}".format(query))
+            for station in stations:
+                # if station.id == intent_request["intent"]["slots"]["station"]["resolutions"]["resolutionsPerAuthority"][0]["values"][0][""]
+                if (station.value == query or 
+                    (query == "salad bar" and station.value == "salad") or
+                    (query == "dessert bar" and station.value == "dessert")):
+                    return "Today, " + station.speak()
 
-        for station in stations:
-            # if station.id == intent_request["intent"]["slots"]["station"]["resolutions"]["resolutionsPerAuthority"][0]["values"][0][""]
-            if (station.value == query or 
-                (query == "salad bar" and station.value == "salad") or
-                (query == "dessert bar" and station.value == "dessert")):
-                return "Today, " + station.speak()
-
-        return "Sorry, I couldn't find a station that matches the name {}".format(query)
+            return STATION_NO_MATCH.format(query)
+        
+        else:
+            return CLOSED
     
                 
 
@@ -83,7 +92,7 @@ def lambda_handler(event, context):
     print(request_type == "IntentRequest")
 
     if request_type == "LaunchRequest":
-        speech = "Hi! I can help you find out what's on the menu at campus dining halls."
+        speech = BANNER
     
 
     elif request_type == "IntentRequest":

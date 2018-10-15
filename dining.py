@@ -105,6 +105,16 @@ class Station:
 
         return output
 
+# Static messages
+BANNER = "Hi! I can help you find out what's on the menu at campus dining halls."
+
+# {1} dining hall name
+CLOSED =  "Sorry, {} dining does not have a menu posted right now. "
+CLOSED += "This location may currently be closed."
+
+# {1} station name
+STATION_NO_MATCH = "Sorry, I couldn't find a station that matches the name {}"
+
 # URLs for Menus   
 
 CORE        = "https://clemson.campusdish.com/LocationsAndMenus/FreshFoodCompany"
@@ -114,7 +124,7 @@ INFILE_SCH  = "sch-lunch.html"
 
 # Fetch and parse the webpage, either from the internet or locally if testing
 
-ONLINE = False
+ONLINE = True
 
 # url = CORE if ONLINE else INFILE
 
@@ -133,6 +143,12 @@ def fetch_page(url):
     except ValueError:
         return open(url)
 
+def is_open(input):
+    page = BeautifulSoup(input, features="lxml")
+
+    status = page.select_one("div.location__status span").get_text()
+
+    return status.casefold() == "Open".casefold()
 
 def parse_stations(input):
 
