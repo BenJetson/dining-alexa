@@ -22,31 +22,6 @@ class Station:
         "Vegetarian": "Vegetarian Station"
     }
 
-    # ID_MATRIX = {
-    #     "Deli": "deli",
-    #     "Dessert": "dessert",
-    #     "Entree Station": "entree",
-    #     "Grill": "grill",
-    #     "Lite-sy Corner": "litesycorner",
-    #     "Mongolian Grill": "mongolian",
-    #     "Pasta": "pasta",
-    #     "Pizza": "pizza",
-    #     "Salad": "salad",
-
-
-    #     "Fresh Focus": "freshfocus",
-    #     "Local - Deli": "deli",
-    #     "Local - Grill": "grill",
-    #     "Local - Pizza": "pizza",
-    #     "Local - Salad Bar": "salad",
-    #     "Local - Smoothie (Aramark)": "dessert",
-    #     "Mongolian": "mongolian",
-    #     "Saute": "saute",
-    #     "Soup": "soup",
-    #     "Taste of Home": "tasteofhome",
-    #     "Vegetarian": "vegetarian"
-    # }
-    
     VALUE_MATRIX = {
         "Deli": "deli",
         "Dessert": "dessert",
