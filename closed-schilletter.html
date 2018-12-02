@@ -1,0 +1,1387 @@
+
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+
+
+<!-- S:W01 -->
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"eef19c038d","applicationID":"88713777","transactionName":"ZVdbMkFWWBZUB0cNVlwdag9HUlUKRwETNlxDR1wVRxh6ClYFRw1WXA==","queueTime":0,"applicationTime":1106,"agent":"","atts":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="apple-mobile-web-app-title" content="Add to Home">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <link rel="apple-touch-icon-precomposed" href="/Assets/Images/addtohomescreen/icon-152x152.png">
+
+    <link rel="canonical" href="http://clemson.campusdish.com/en/LocationsAndMenus/SchilletterDiningHall" />
+    <link rel="alternate" hreflang="en" href="http://clemson.campusdish.com/en/LocationsAndMenus/SchilletterDiningHall" />
+
+
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <title>Schilletter Dining Hall - Clemson University</title>
+    <meta name="description" content="Schilletter Dining Hall is located on the east side of campus in Bryan Mall. This dining location with display-style cooking stations and made-to-order entr&#233;es." />
+
+    <link rel="stylesheet" href="/Assets/Styles/page-sustainability.css" />
+    <link rel="stylesheet" href="/Assets/Styles/page-privacy.css" />
+    <link rel="stylesheet" href="/Assets/Styles/page-terms.css" />
+    <link rel="stylesheet" href="/Assets/Styles/page-contact-us.css" />
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="/Bundles/scripts/Aramark.ACP.Foundation.Theming.min.js"></script>
+
+    <link href="/Bundles/styles/Aramark.ACP.Foundation.Theming.min.css" rel="stylesheet" />
+<link href="/Assets/Styles/addtohomescreen.css" rel="stylesheet" />
+<link href="/Assets/Styles/main.css" rel="stylesheet" />
+<link href="/Assets/Styles/account.css" rel="stylesheet" />
+<link href="/Assets/Styles/checkout.css" rel="stylesheet" />
+<link href="/Assets/Styles/navigation.css" rel="stylesheet" />
+<link href="/Assets/Styles/locations.css" rel="stylesheet" />
+<link href="/Assets/Styles/libs/flickity.min.css" rel="stylesheet" />
+<link href="/Assets/Styles/carousel.css" rel="stylesheet" />
+<link href="/Assets/Styles/DateRangePicker/date-range-picker.css" rel="stylesheet" />
+<link href="/Assets/Styles/page-food-ordering.css" rel="stylesheet" />
+<link href="/Assets/Styles/menus.css" rel="stylesheet" />
+<link href="/Assets/Styles/product.css" rel="stylesheet" />
+<link href="/Assets/Styles/search.css" rel="stylesheet" />
+
+    <link href="/-/media/Global/Higher-Education/CSS-Theme/ClemsonU.ashx" rel="stylesheet" />
+
+    <script type="text/javascript">
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+ 	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+ 	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ 	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ 	ga('create', 'UA-44357124-15', 'clemson.campusdish.com');
+ 	ga('create', 'UA-44023857-1', 'campusdish.com', {'name': 'newTracker'}); // New tracker.
+ 	 
+	ga('require', 'displayfeatures');
+	ga('send', 'pageview');
+ 	
+        ga('newTracker.require', 'displayfeatures'); // Send demographics for new tracker.
+        ga('newTracker.send', 'pageview'); // Send page view for new tracker.
+ 	//ga(function() {
+ 	//var newTracker = ga.getByName('newTracker');
+ 	//});
+ 	//ga(function() {
+ 	//var allTrackers = ga.getAll();
+ 	//});
+ 	 
+ 	
+<!-- Facebook Pixel Code -->
+var currPage = location.pathname.substring(location.pathname.lastIndexOf('/')+1).toLowerCase();
+switch (currPage) {
+case 'cart.aspx':
+fbq('track', 'PageView');
+fbq('track', 'AddToCart');
+break;
+case 'orderconfirmation.aspx':
+fbq('track', 'PageView');
+var x = document.querySelectorAll('.grand-total .data'); 
+var amt = 0;
+if (typeof(x)!='undefined' && x != null && x.length>0) {
+amt=x[0].innerHTML;
+fbq('track', 'Purchase', { value: amt, currency: 'USD' }); 
+}
+break;
+default:
+fbq('track', 'PageView');
+break;
+}
+<!-- End Facebook Pixel Code -->
+</script>
+    
+
+    <link rel="stylesheet" href="/Assets/Styles/page-my-account.css" />
+    <link rel="stylesheet" href="/Assets/Styles/page-home.css" />
+</head>
+
+<body>
+    
+<header class="header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                
+<div class="header-wrapper">
+    
+<div class="logo">
+    <a href="/">
+        <img src="/-/media/Local/Higher-Education/GroupB/Clemson/Images/ClemsonHome.ashx?h=53&amp;w=250&amp;hash=77E3C9B4CEAD06D93EAEDD04E26952BAE1179914" alt="Clemson" />
+    </a>
+</div>
+
+    <div class="headerTop">
+    <ul class="unstyled navigation">
+        <li class="has-submenu skiplink" id="skiplinks"><a tabindex=0 href="#mainContent">Skip to Main Content</a></li>
+        <li class="has-submenu language"></li>
+        <li class="has-submenu account">
+    <a href="/Login" class="signIn " >
+        <svg class="svg account-circle" viewBox="0 0 24 24" role="img" aria-labelledby="accountSVGAccountLink">
+                 <title id="accountSVGAccountLink">Signin Signout Icon</title>
+            <path d="M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z"></path>
+        </svg>
+
+        <span class="accountName">Sign In</span>
+    </a>
+</li>
+        <li class="has-submenu cart"></li>
+    </ul>
+</div>
+
+<script>
+    $('#skiplinks a').focus(function () {
+        $('#skiplinks').removeClass('skiplink');
+    });
+	  $('#skiplinks a').blur(function () {
+        $('#skiplinks').addClass('skiplink');
+    });
+</script>
+
+    
+
+<div class="primaryMenu">
+    <nav aria-label="header">
+
+<div class="navigation__mobileToggle" tabindex="0">
+        <span></span>
+</div>
+
+<ul class="unstyled navigation">
+                    <li>
+                        <a class="navigation__link" href="/LocationsAndMenus">
+                            Locations &amp; Menus
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navigation__link" href="/HealthAndWellness">
+                            Health &amp; Wellness
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navigation__link" href="/MealPlans">
+                            Meal Plans
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navigation__link" href="/Sustainability">
+                            Sustainability
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navigation__link" href="/Catering">
+                            Catering
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navigation__link" href="/ContactUs">
+                            Contact Us
+                        </a>
+                    </li>
+        </ul>
+    </nav>
+</div>
+
+<script>
+    $('#signOutButton').on('click',
+        function () {
+            location.href = '/api/accounts/logout';
+        })
+</script>
+</div>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div class="banner bg-dark" style="background-image:url(/-/media/Global/All-Divisions/Images/LocationsMenus/PageBanners/Generic/Brushetta.ashx?mh=1280&amp;mw=1920&amp;hash=A22A3A143738C468D49CFA09BD1920CED272050E)">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                        <h1 class="page-title">Schilletter Dining Hall</h1>
+                                            <div class="sub-title not-visible">&nbsp;</div>
+                    
+
+
+
+<a id="menuSkipLink" class="btn solid scrollBtn" href="#menu">View Menu</a>
+
+    
+        <script>
+            document.getElementById('menuSkipLink').addEventListener('click', function(e) {
+                e.preventDefault();
+                var target = $('#menu');
+                if (target.hasClass('js-daily')) {
+                    var datepicker = target.find('#singledatepicker');
+                    if (datepicker) {
+                        datepicker.focus();
+                    }
+                }
+                else {
+                    target.attr('tabindex', '-1');
+                    target.focus();
+                }
+            });
+        </script>
+    
+
+                </div>
+                
+    <button class="favIcon meta-data-tag " data-location="1891" aria-label="Mark Schilletter Dining Hall as Favorite button">
+        <svg class="svg heart-outline" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false"> 
+            <path fill="#fff" d="M12.1,18.55L12,18.65L11.89,18.55C7.14,14.24 4,11.39 4,8.5C4,6.5 5.5,5 7.5,5C9.04,5 10.54,6 11.07,7.36H12.93C13.46,6 14.96,5 16.5,5C18.5,5 20,6.5 20,8.5C20,11.39 16.86,14.24 12.1,18.55M16.5,3C14.76,3 13.09,3.81 12,5.08C10.91,3.81 9.24,3 7.5,3C4.42,3 2,5.41 2,8.5C2,12.27 5.4,15.36 10.55,20.03L12,21.35L13.45,20.03C18.6,15.36 22,12.27 22,8.5C22,5.41 19.58,3 16.5,3Z" />
+        </svg>
+
+        <svg class="svg heart" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false"> 
+            <path fill="#fff" d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z" />
+        </svg>
+    </button>
+
+
+    <button class="favIcon meta-data-tag " data-location="1891" aria-label="Mark Schilletter Dining Hall as Favorite button">
+        <svg class="svg heart-outline" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false"> 
+            <path fill="#fff" d="M12.1,18.55L12,18.65L11.89,18.55C7.14,14.24 4,11.39 4,8.5C4,6.5 5.5,5 7.5,5C9.04,5 10.54,6 11.07,7.36H12.93C13.46,6 14.96,5 16.5,5C18.5,5 20,6.5 20,8.5C20,11.39 16.86,14.24 12.1,18.55M16.5,3C14.76,3 13.09,3.81 12,5.08C10.91,3.81 9.24,3 7.5,3C4.42,3 2,5.41 2,8.5C2,12.27 5.4,15.36 10.55,20.03L12,21.35L13.45,20.03C18.6,15.36 22,12.27 22,8.5C22,5.41 19.58,3 16.5,3Z" />
+        </svg>
+
+        <svg class="svg heart" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false"> 
+            <path fill="#fff" d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z" />
+        </svg>
+    </button>
+
+
+            </div>
+        </div>
+    </div>
+
+
+<div class="content-wrapper">
+
+    
+
+
+    <main class="main" id="mainContent">
+        <div class="container">
+            
+<div class="row">
+    
+
+
+    <div class="col-xs-12 col-sm-4">
+        <div class="location__details">
+            <div class="location__hours">
+                <div class="location__status closed" style="background: #fff;">
+                    <svg class="svg clock" viewBox="0 0 24 24" role="img" aria-labelledby="clockHOPSVG">
+                           <title id="clockHOPSVG">Clock Icon</title>
+                        <path d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z" />
+                    </svg>
+                    <span class="closed">Closed</span>
+                </div>
+
+        <p>Standard Hours</p>
+<ul class="unstyled"><li><div class="mealPeriod">Breakfast</div><ul class="unstyled"><li><span class="location__day">Mon - Fri</span><span class="location__times">6:00AM - 10:30AM</span></li></ul></li><li><div class="mealPeriod">Brunch</div><ul class="unstyled"><li><span class="location__day">Sun</span><span class="location__times">12:30PM - 8:00PM</span></li></ul></li><li><div class="mealPeriod">Lunch</div><ul class="unstyled"><li><span class="location__day">Mon - Fri</span><span class="location__times">10:30AM - 2:00PM</span></li></ul></li><li><div class="mealPeriod">Afternoon Snack</div><ul class="unstyled"><li><span class="location__day">Mon - Fri</span><span class="location__times">3:00PM - 4:00PM</span></li></ul></li><li><div class="mealPeriod">Late Lunch</div><ul class="unstyled"><li><span class="location__day">Mon - Fri</span><span class="location__times">2:00PM - 4:45PM</span></li></ul></li><li><div class="mealPeriod">Dinner</div><ul class="unstyled"><li><span class="location__day">Mon - Thu</span><span class="location__times">4:45PM - 9:00PM</span></li><li><span class="location__day">Fri</span><span class="location__times">4:45PM - 8:00PM</span></li></ul></li><li><div class="mealPeriod">All Day</div><ul class="unstyled"><li><span class="location__day">Mon - Thu</span><span class="location__times">6:00AM - 9:00PM</span></li><li><span class="location__day">Fri</span><span class="location__times">6:00AM - 8:00PM</span></li><li><span class="location__day">Sat</span><span class="location__times">Closed</span></li><li><span class="location__day">Sun</span><span class="location__times">12:30PM - 8:00PM</span></li></ul></li></ul>
+                    <a href="#" data-toggle="modal" data-target="#hoursModal">Exam Week (12/8-12/14)</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="hoursModal" tabindex="0" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                        <span tabindex="0" class="modal-title" autofocus>Exam Week (12/8-12/14)</span>
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>                                    
+                </div>
+                <div class="modal-body">
+                    <div class="location__hours">
+                        <ul class="unstyled"><li><div class="mealPeriod">All Day</div><ul class="unstyled"><li><span class="location__day">Mon - Thu</span><span class="location__times">6:00AM - 8:00PM</span></li><li><span class="location__day">Fri</span><span class="location__times">6:00AM - 7:00PM</span></li><li><span class="location__day">Sat</span><span class="location__times">Closed</span></li><li><span class="location__day">Sun</span><span class="location__times">12:30PM - 8:00PM</span></li></ul></li></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+<div class="col-xs-12 col-sm-8">
+    <div class="location__details">
+            <p class="location__description callout"><p>Schilletter Dining Hall is located on the east side of campus in Bryan Mall. This dining location with display-style cooking stations and made-to-order entr&eacute;es features: True Balance (station that eliminates 7 of the top 8 allergens), a Mongolian Grill, rotating menus at the Destination Station, a bistro-inspired grill, brick-oven pizza, a salad bar, and more. With recent renovations, the d&eacute;cor features aesthetically pleasing seating, coupled with lighting to create a variety of areas with their own eclectic atmospheres. There is even a fireplace with cozy seating for studying and meetings.</p>
+<p><strong>2018-2019 Walk-In Rates:</strong> Breakfast: $8.50 plus tax Lunch: $11.50 plus tax Dinner: $12.00 plus tax Sunday Brunch: $11.50 plus tax&nbsp;</p>
+<p>Eat on the run with our Reusable To-Go Box program!<br />
+Our program is free to join for meal plan members and only costs $5 per semester for those without a meal plan. Just let a cashier know at The Fresh Food Company or Schilletter that you would like to participate and you will receive a reusable To-Go Box for immediate use. The next time you would like a to-go meal, bring back your used To-Go Box and receive a clean one to use now or a credit for a reusable To-Go Box later. To-Go Boxes are not permitted for dine-in and lids must close.</p></p>
+
+            <div class="location__payments">
+                <div class="disclaimer"> Accepted Here</div>
+                <p>Paw Points, Tigerstripe, Visa, Mastercard, American Express, Discover, and Cash, in addition to meal plan swipes.</p>
+            </div>
+    </div>
+</div>
+
+</div>
+<div class="row">
+    
+    <div class="col-sm-8 col-sm-offset-2">
+        <div class="information location__callout">
+            <p>&nbsp;</p>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="row">
+    
+
+
+
+
+<div class="col-xs-12">
+    <div class="tabList tabList--3 location__menuSelect">
+
+        <div class="cs-select location__filter js-noSelect mealType tab" data-target="mealType">
+            <button class="cs-placeholder btn unstyled" type="button">
+                <span></span>
+
+                <svg class="svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+                </svg>
+            </button>
+
+            <div class="cs-options content-wrapper">
+                <ul id="customPeriodsSelect" class="unstyled"></ul>
+            </div>
+
+            <select id="mealType" name="mealType" data-param="mealType" aria-label="mealType"></select>
+        </div>
+
+            <div class="dateSelect daily js-active tab" data-type="daily">
+                <button id="dailyMenuButton" type="button" class="menubtn">Daily Menu</button>
+            </div>
+                    <div class="dateSelect weekly  tab" data-type="weekly">
+                <button id="weeklyMenuButton" type="button" class="menubtn">Weekly Menu</button>
+            </div>
+            </div>
+</div>
+
+<script>
+    $(function () {
+        menus.getDailyMenu = function () {
+            if (menus.requestParameters.mode !== 'Daily') {
+                menus.requestParameters.mode = 'Daily';
+                delete menus.requestParameters.periodId;
+                menus.getMenu();
+            }
+        };
+
+        menus.getWeeklyMenu = function () {
+            if (menus.requestParameters.mode !== 'Weekly') {
+                menus.requestParameters.mode = 'Weekly';
+                delete menus.requestParameters.periodId;
+                menus.getMenu();
+            }
+        }
+
+        menus.fillPeriodSelector = function () {
+            $('#mealType').html('');
+            if (menus.periods && menus.periods.length > 0) {
+                menus.periods.forEach(function (currentValue) {
+                    var option = $('<option>', {
+                        value: currentValue.periodId,
+                    });
+                    if (currentValue.periodId == menus.selectedPeriodId) {
+                        option.attr('selected', '');
+                    }
+                    //for FoodOrder show only current period
+                    if (menus.requestParameters.mode != "FoodOrder" || currentValue.periodId == menus.selectedPeriodId) {
+                        option.html(currentValue.name)
+                        $('#mealType').append(option);
+                    }
+                });
+                $('.cs-select[data-target="mealType"] button span').html(menus.selectedPeriodName);
+                $('.cs-select.mealType.tab').show();
+            } else {
+                $('.cs-select.mealType.tab').hide();
+            }
+        }
+
+        menus.updatePeriodSelector = function () {
+            menus.fillPeriodSelector();
+            var parent = $('.cs-select[data-target="mealType"]');
+            var target = parent.data('target');
+            parent.find('ul').html('');
+
+            $('#mealType option').each(function () {
+                var optionText = $(this).text();
+                var optionVal = $(this).val();
+                var listItem = '<li data-select="' + target + '" data-val="' + optionVal + '"><button>' + optionText + '</button></li>';
+
+                if ($(this).attr('selected') === 'selected') {
+                    $('.cs-select[data-target="' + target + '"].cs-placeholder span').text(optionText);
+                    listItem = '<li class="current" data-select="' + target + '" data-val="' + optionVal + '"><button>' + optionText + '</button></li>';
+                }
+                parent.find('ul').append(listItem);
+            });
+        };
+
+            
+                //$('.dateSelect.daily button, .dateSelect.weekly button, .dateSelect.foodOrder button').on('click', function () {
+                $('.dateSelect.daily button, .dateSelect.weekly button').on('click', function () {
+                    var parent = $(this).parent();
+
+                    $('.dateselect').removeClass('js-active');
+                    parent.addClass('js-active');
+
+                    if (parent.hasClass('daily')) {
+                        $('#mealCalculator').show();
+                        $('.displayDate').removeClass('js-weekly');
+                        $('.displayDate').addClass('js-daily');
+                    } else if (parent.hasClass('weekly')) {
+                        $('#mealCalculator').hide();
+                        $('.displayDate').removeClass('js-daily');
+                        $('.displayDate').addClass('js-weekly');
+                    }
+                });
+
+                $('#foodOrderMenuButton').click(function() {location.href = '/en/LocationsAndMenus/SchilletterDiningHall?mode=FoodOrder&amp;locationId=1891'});
+                $('#dailyMenuButton').click(menus.getDailyMenu);
+                $('#weeklyMenuButton').click(menus.getWeeklyMenu);
+                $('#dailyMenuButton, #weeklyMenuButton').on('periodsChanged', menus.updatePeriodSelector);
+
+                $('#mealType').change(function () {
+                    var $selectedOption = $(this).find('option[selected="selected"]');
+
+                    menus.selectedPeriodId = $selectedOption.val();
+                    menus.selectedPeriodName = $selectedOption.text();
+                    menus.requestParameters.periodId = menus.selectedPeriodId;
+                    menus.getMenu(menus.onSuccess);
+                });
+            
+
+        menus.fillPeriodSelector();
+    });
+</script>
+
+
+</div>
+<div class="row">
+    
+
+<div class="col-xs-12">
+    <div class="location__filters">
+
+        
+<div aria-live="polite" aria-atomic="true" class="sr-only" id="mealCalculatorUpdates"></div>
+<div class="location__filter mealCalculator">
+
+</div>
+<script>
+    $(function () {
+
+        menus.updateCalculator = function () {
+            $("#loading").show();
+            $.ajax({
+                type: "GET",
+                url: "/api/menus/GetMenuProductsByIds",
+                data: {
+                    ids: menus.selectedItems.join(),
+                    locationId: menus.requestParameters.locationId
+                },
+                success: function (result) {
+                    if (result && result.trim()) {
+                        $('.location__filter.mealCalculator').html(result);
+                        var currentItems = $('#mealCalculator .currentItems');
+                        if (currentItems.length > 0) {
+                            $('#mealCalculatorUpdates').html(currentItems.html());
+                        }
+                        else {
+                            $('#mealCalculatorUpdates').html('');
+                        }
+                    }
+                    $("#loading").hide();
+                },
+                error: function () {
+                    $("#loading").hide();
+                }
+            });
+        }
+
+        menus.addLabel = 'Add {0} to Meal Calculator';
+        menus.removeLabel = 'Remove {0} from Meal Calculator';
+
+        menus.toggleState = function (selectedProductId) {
+
+            var itemSelector = 'li[id="' + selectedProductId + '"]';
+            var button = $('button[product-id="' + selectedProductId + '"]');
+            var productName = button.attr('product-name');
+            var label = '';
+
+            if (selectedProductId && !menus.selectedItems.filter(function (itemId) { return itemId === selectedProductId; }).length > 0) {
+                menus.selectedItems.push(selectedProductId);
+                $(itemSelector).addClass('js-isSelected');
+                label = menus.removeLabel;
+
+            } else if (selectedProductId && menus.selectedItems.filter(function (itemId) { return itemId === selectedProductId; }).length > 0) {
+                menus.selectedItems = menus.selectedItems.filter(function (item) { return item !== selectedProductId; });
+                $(itemSelector).removeClass('js-isSelected');
+                label = menus.addLabel;
+            }
+
+            button.attr('aria-label', label.replace('{0}', productName));
+
+            if (menus.selectedItems.length > 0) {
+                $('.location__filter.mealCalculator').addClass('js-hasItems');
+            } else if (menus.selectedItems.length == 0) {
+                $('.location__filter.mealCalculator').removeClass('js-hasItems');
+            }
+
+            menus.updateCalculator();
+        }
+
+        menus.rebuildCalculator = function () {
+            if (menus.requestParameters.mode === menus.modes.daily && menus.selectedItems.length > 0) {
+                var items = $('.menu__items').find('.menu__item').map(function () {
+                    if ($(this).attr('show') === 'false') {
+                        return this.id;
+                    }
+                }).get();
+
+                items.forEach(function (id) {
+                    if (id && menus.selectedItems.filter(function (itemId) { return itemId === id; }).length > 0) {
+                        menus.selectedItems = menus.selectedItems.filter(function (item) { return item !== id; });
+                        var itemSelector = 'li[id="' + id + '"]';
+                        $(itemSelector).removeClass('js-isSelected');
+                        var button = $('button[product-id="' + id + '"]');
+                        button.attr('aria-label', menus.addLabel.replace('{0}', button.attr('product-name')));
+                    }
+                });
+
+                if (menus.selectedItems.length == 0) {
+                    $('.location__filter.mealCalculator').removeClass('js-hasItems');
+                }
+
+                menus.updateCalculator();
+            }
+        }
+
+        menus.clearItems = function () {
+            if (menus.requestParameters.mode === menus.modes.daily) {
+                menus.selectedItems = [];
+
+                $('.menu__item.js-isSelected').each(function (index, el) {
+                    $(this).removeClass('js-isSelected');
+                    var button = $(this).children('button.mealCalculator');
+                    button.attr('aria-label', menus.addLabel.replace('{0}', button.attr('product-name')));
+                });
+
+                $('.location__filter.mealCalculator').removeClass('js-active');
+                $('.location__filter.mealCalculator').removeClass('js-hasItems');
+
+                menus.updateCalculator();
+            }
+        }
+
+        $("body").on("click", ".daily .mealCalculator", function () {
+            var selectedProductId = $(this).attr('product-id');
+
+            menus.toggleState(selectedProductId);
+        });
+
+        $("body").on("click", ".modal-footer .btn.itemSelect", function () {
+            var selectedProductId = $(this).attr('product-id');
+
+            menus.toggleState(selectedProductId);
+
+            $('#viewItemModal').modal('hide');
+
+        });
+
+        $("body").on("click", "#clearMealCalculatorItems", function () {
+            menus.clearItems();
+        });
+
+        $('#menusContent').on('menuItemsChanged', menus.clearItems);
+
+        $('#menusContent').on('menuItemsFiltered', menus.rebuildCalculator);
+
+        if (menus.requestParameters.mode === menus.modes.daily) {
+            menus.updateCalculator();
+        }
+
+    });
+</script>
+
+    </div>
+    <div class="selectedFilters"></div>
+</div>
+
+<script>
+    $(function () {
+        menus.selectedAllergens = [];
+		menus.selectedDiets = [];
+        menus.selectedCategories = [];
+
+        menus.findIndex = function (arr, fn) {
+            return arr.reduce(function (carry, item, idx) {
+                if (fn(item, idx)) {
+                    return idx;
+                }
+
+                return carry;
+            }, -1);
+        };
+
+        menus.filterByAllergens = function ($selector) {
+            if (menus.selectedAllergens.length == 0) {
+                return;
+            }
+
+            $($selector).each(function () {
+                var $elem = $(this);
+                if ($elem.is(':visible')) {
+                    menus.selectedAllergens.forEach(function (filter) {
+                        var attr = $elem.attr(filter);
+
+                        if (attr && attr === 'True' || !attr) {
+
+                                $elem.fadeOut('slow');
+                                $elem.attr('show', false);
+                        }
+
+                    });                    
+                }
+            });
+        };
+
+        menus.filterByDiets = function ($selector) {
+            if (menus.selectedDiets.length == 0) {
+                return;
+            }
+
+            $($selector).each(function () {
+                var $elem = $(this);                     
+                var needToHide = true;
+
+                menus.selectedDiets.forEach(function (diet) {
+                    var attr = $elem.attr(diet);
+
+                    if (attr) {
+                        if (attr === 'True') {
+                            needToHide = false;
+                        }
+                    } 
+                });
+
+                if (needToHide) {
+                    $elem.fadeOut('slow');
+                    $elem.attr('show', false);
+                }
+               
+            });
+		};
+
+		menus.filterByCategories = function ($selector) {
+			if (menus.selectedCategories.length == 0) {
+				return;
+			}
+
+			$($selector).each(function () {
+				var $elem = $(this);
+				var needToHide = true;
+
+				menus.selectedCategories.forEach(function (category) {
+					var attr = $elem.data("category");
+
+					if (attr && attr === category) {
+						needToHide = false;
+					}
+				});
+
+				if (needToHide) {
+					$elem.fadeOut('slow');
+					$elem.attr('show', false);
+				} 
+			});
+		};
+
+        menus.filter = function () {
+
+			var $selector = '.menu__item.item';
+			var $categorySelector = '.menu__parentCategory'
+
+            //$($selector).css('background-color', 'inherit').fadeIn();
+			$($selector + ", " + $categorySelector).removeAttr('style').fadeIn();
+			$($selector + ", " + $categorySelector).attr('show', true);
+
+            menus.filterByDiets($selector);
+			menus.filterByAllergens($selector);
+			menus.filterByCategories($categorySelector);
+            $("#menusContent").trigger('menuItemsFiltered');
+        };
+
+        menus.toggleMenuFilter = function (element, filters) {
+            var $filter = $(element).data('filter');
+
+            var index = menus.findIndex(filters, function (filter) {
+                return filter === $filter;
+            });
+
+            if (index === -1) {
+                filters.push($filter);
+            } else {
+                filters.splice(index, 1);
+            }
+
+            menus.filter();
+        };
+       
+        $('body').on('click', '.selectedFilters .btn.solid', function () {
+            var $filter = $(this).data('filter');
+
+            var index = menus.findIndex(menus.selectedCategories, function (filter) {
+				return filter === $filter;
+			});
+
+			if (index === -1) {
+                var index = menus.findIndex(menus.selectedAllergens, function (filter) {
+					return filter === $filter;
+				});
+			} else {
+				menus.selectedCategories.splice(index, 1);
+			}
+
+            if (index === -1) {
+                index = menus.findIndex(menus.selectedDiets, function (filter) {
+                    return filter === $filter;
+                });
+
+                if (index !== -1) {
+                    menus.selectedDiets.splice(index, 1);
+                }
+            } else {
+                menus.selectedAllergens.splice(index, 1);
+            }
+
+            menus.filter();
+        });
+
+        $('.btn.outline.diet').click(function () {
+            menus.toggleMenuFilter(this, menus.selectedDiets);
+        });
+
+        $('.btn.outline.allergen').click(function () {
+            menus.toggleMenuFilter(this, menus.selectedAllergens);
+		});
+
+		$('.btn.outline.category').click(function () {
+			menus.toggleMenuFilter(this, menus.selectedCategories);
+		});
+
+
+        $('#menusContent').on('menuItemsChanged', menus.filter);
+    });
+</script>
+
+</div>
+<div class="row">
+    
+<div class="col-xs-12">
+    <div id="menu" class="displayDate js-daily">
+        <div class="daily">
+            <a role="button" aria-label="Choose a Date to Show Menu" href="#" id="singledatepicker" aria-expanded="false" onclick="return false;">
+                <span class="date"><!-- Today's Date --></span>
+                <svg class="svg calendar-range" viewBox="0 0 24 24" data-date="" aria-describedby="singledatepicker">
+                    <path d="M9,10H7V12H9V10M13,10H11V12H13V10M17,10H15V12H17V10M19,3H18V1H16V3H8V1H6V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M19,19H5V8H19V19Z" />
+                </svg>
+            </a>
+        </div>
+        <div class="weekly">
+            <button id="decrementWeek" class="decrement" data-date="" aria-label="Previous Week Menu" value="Previous Week Menu">
+                <svg class="svg chevron-left" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" />
+                </svg>
+            </button>
+            <span class="date"><!-- Current Week --></span>
+            <button id="incrementWeek" class="increment" data-date="" aria-label="Next Week Menu" value="Next Week Menu">
+                <svg class="svg chevron-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+                </svg>
+            </button>
+        </div>
+        <div class="foodOrder">
+                <span class="date"><!-- Today's Date --></span>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        menus.monthArr = ['January', 'February', 'March', 'April', 'May', 'June',
+            'July', 'August', 'September', 'October', 'November', 'December'];
+
+        menus.weekdayArr = ['Sunday', 'Monday', 'Tuesday', 'Wednesday',
+            'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+        menus.updateDailyDateSelector = function () {
+            var date = new Date(menus.requestParameters.date);
+            var day = date.getDate();
+            var month = menus.monthArr[date.getMonth()];
+            var weekday = menus.weekdayArr[date.getDay()];
+
+            $('#singledatepicker').data('daterangepicker').startDate = moment(menus.requestParameters.date, "M/D/YYYY");
+            $('#singledatepicker').data('daterangepicker').endDate = moment(menus.requestParameters.date, "M/D/YYYY");
+            $('#singledatepicker').children('.date').html(weekday + ', ' + month + ' ' + day);
+            
+            //also fill date for foodOrder
+            $('.foodOrder .date').html(weekday + ', ' + month + ' ' + day);
+        };
+
+        menus.updateWeeklyDateSelector = function () {
+            function getWeek(date) {
+                //* Get values for current week
+                var startOfWeek = moment(date).startOf('isoweek').toDate();
+                var endOfWeek = moment(date).endOf('isoweek').toDate();
+
+                var dateEnd = new Date(endOfWeek).getDate();
+                var dateStart = new Date(startOfWeek).getDate();
+                var monthEnd = menus.monthArr[new Date(endOfWeek).getMonth()];
+                var monthStart = menus.monthArr[new Date(startOfWeek).getMonth()];
+
+                //* Get dates for adjacent weeks
+                var nextWeek = moment(date).add('days', 7).startOf('isoweek').toDate();
+                var prevWeek = moment(date).subtract('days', 7).startOf('isoweek').toDate();
+
+                //* Check if the prev week value comes before the start of the current week
+                if (new Date(prevWeek).getTime() < new Date(moment(new Date).startOf('isoweek').toDate()).getTime()) {
+                    $('#decrementWeek').addClass('js-hide');
+                } else {
+                    $('#decrementWeek').removeClass('js-hide');
+                }
+
+                //* Update date attributes
+                $('.displayDate .weekly button.decrement').data('date', prevWeek);
+                $('.displayDate .weekly button.increment').data('date', nextWeek);
+
+                return monthStart + ' ' + dateStart + ' - ' + monthEnd + ' ' + dateEnd;
+            }
+            var date = new Date(menus.requestParameters.date);
+
+            $('.displayDate .weekly .date').html(getWeek(date));
+        };
+
+        $('#singledatepicker').daterangepicker(
+            {
+                autoUpdateInput: false,
+                singleDatePicker: true,
+                showDropdowns: true,
+                disablePopup: false, 
+                startDate: new Date(menus.requestParameters.date),
+                ariaLabel: "Press the arrow keys to navigate by day, PageUp and PageDown to navigate by month, Shift+PageUp and Shift+PageDown to navigate by year, or Escape to cancel."
+            },
+            function (startDate) {
+                var $selectedVal = startDate.format("M/D/YYYY");
+
+                if ($selectedVal !== menus.requestParameters.date) {
+                    menus.requestParameters.date = $selectedVal;
+                    menus.updateDailyDateSelector();
+                    menus.updateWeeklyDateSelector();
+                    menus.getMenu();
+                }
+            }
+        );
+
+        $('#singledatepicker').on('show.daterangepicker', function (ev, picker) {
+            $(this).attr('aria-expanded', 'true');
+        });
+
+        $('#singledatepicker').on('hide.daterangepicker', function (ev, picker) {
+            $(this).attr('aria-expanded', 'false');
+        });
+
+        menus.updateWeeklyDateSelector();
+        menus.updateDailyDateSelector();
+	});
+</script>
+
+	<script>
+        $('.displayDate .weekly button').click(function () {
+            var date = $(this).data('date');
+            menus.requestParameters.date = (date.getMonth() + 1) + '/' + date.getDate() + '/' + date.getFullYear();
+            menus.updateWeeklyDateSelector();
+            menus.updateDailyDateSelector();
+            menus.getMenu();
+        });
+    </script>
+
+</div>
+<div>
+    
+
+
+
+<div id="menusContent">
+
+
+
+    <p class="text-center">There are currently no menus available for this meal period and date.</p>
+<div id="menuDailyDiv" class="row js-show">
+    <div class="col-xs-12">
+        <div class="menu daily">
+            <div class="menu-wrapper">
+                <div class="menu__details">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script>
+    $(function () {
+        menus.periods = [];
+        menus.selectedPeriodId = '';
+        menus.selectedPeriodName = '';
+        menus.requestParameters.periodId = menus.selectedPeriodId;
+    });
+</script></div>
+<div class="modal fade" id="viewItemModal" aria-labelledby="viewItemModal" tabindex="-1" role="dialog">
+</div>
+
+<script>
+    var menus = {
+        focused: null, //a variable to remember focus
+        modes: {
+            daily: 'Daily',
+            weekly: 'Weekly',
+            foodOrder: 'FoodOrder'
+        },
+        requestParameters: {
+            locationId: '1891',
+            storeId: undefined,
+            mode: 'Daily',
+            periodId: '',
+            date: '12/01/2018'
+        },
+        defaultMode: 'Daily',
+        displayDailyMenu: true,
+        displayWeeklyMenu: true,
+        displayOnlyCurrentDayMenu: false,
+        periods: [],
+        selectedPeriodId: '',
+        selectedPeriodName: '',
+        selectedItems: [],
+        getMenu: function (onSuccess) {
+            var self = this;
+            $("#loading").show();
+            $.ajax({
+                type: "GET",
+                url: "/api/menus/GetMenu",
+                data: this.requestParameters,
+                success: function (data) {
+                    if (onSuccess) {
+                        onSuccess(data);
+                    }
+                    self.onSuccess(data);
+                    self.updateBrowserLocation();
+                    $("#loading").hide();
+                },
+                error: function () {
+                    $("#loading").hide();
+                }
+            });
+        },
+        updateBrowserLocation: function () {
+            var queryString = $.param(this.requestParameters);
+            history.replaceState(null, '', window.location.origin + window.location.pathname + '?' + queryString);
+        },
+        getProductDetails: function (menuProductId) {
+            $("#loading").show();
+            $.ajax({
+                type: "GET",
+                url: "/api/menus/GetProductDetails",
+                data: {
+                    locationId: this.requestParameters.locationId,
+                    mode: this.requestParameters.mode,
+                    date: this.requestParameters.date,
+                    menuProductId: menuProductId
+                },
+                success: function (result) {
+                    if (result && result.trim()) {
+                        $('#viewItemModal').html(result);
+                        menus.focused = document.activeElement;
+                        $('#viewItemModal').modal('show');
+                    }
+                    $("#loading").hide();
+                },
+                error: function () {
+                    $("#loading").hide();
+                }
+            });
+        },
+        getMenuCalendar: function () {
+            $("#loading").show();
+            $.ajax({
+                type: "GET",
+                url: "/api/menus/GetMenuCalendar",
+                data: {
+                    locationId: this.requestParameters.locationId,
+                },
+                success: function (result) {
+					if (result && result.Now && result.NumberDaysAfter && result.NumberDaysBefore && result.AvailableDates) {
+						var now = moment.utc(result.Now).toDate();
+                        var maxDate = moment.utc(now.setDate(now.getDate() + parseInt(result.NumberDaysAfter))).format('YYYY-MM-DD');
+						now = moment.utc(result.Now).toDate();
+                        var minDate = moment.utc(now.setDate(now.getDate() - parseInt(result.NumberDaysBefore))).format('YYYY-MM-DD');
+
+                        var drp = $("#singledatepicker").data('daterangepicker');
+
+                        $('#singledatepicker').on('showCalendar.daterangepicker', function (ev, picker) {
+                            $('td.off.disabled').attr('title', 'No Menu');
+                            $('td.available:not(.menu-unavailable)').attr('title', 'Menu available');
+                            $('td.available.menu-unavailable').attr('title', 'Menu data unavailable');
+
+                        });
+
+                        drp.isInvalidDate = function (date) {
+                            var isInvalid = true;
+
+                            if (result.AvailableDates) {
+                                result.AvailableDates.forEach(function (elem) {
+                                    var formattedDate = date.format('YYYY-MM-DD');
+									if (formattedDate == moment.utc(elem).format('YYYY-MM-DD')
+                                        || formattedDate > maxDate || formattedDate < minDate ) {
+                                        isInvalid = false;
+                                    }
+                                });
+                            }
+
+                            return isInvalid;
+                        }
+
+                        drp.isCustomDate = function (date) {
+                            var formattedDate = date.format('YYYY-MM-DD');
+
+                            if (formattedDate > maxDate || formattedDate < minDate) {
+                                return 'menu-unavailable';
+                            }
+
+                            return false;
+                        }
+
+                        drp.updateView();
+                        drp.updateCalendars();
+                    }
+                    $("#loading").hide();
+                },
+                error: function () {
+                    $("#loading").hide();
+                }
+            });
+        },
+        getFoodProductDetails: function (menuProductId, catalogId) {
+            $("#loading").show();
+            $.ajax({
+                type: "GET",
+                url: "/api/menus/FoodProductDetails",
+                data: {
+                    locationId: this.requestParameters.locationId,
+                    mode: this.requestParameters.mode,
+                    date: this.requestParameters.date,
+                    prod: menuProductId,
+                    root: catalogId
+                },
+                success: function (result) {
+                    if (result && result.trim()) {
+                        $('#viewItemModal').html(result);
+                        menus.focused = document.activeElement;
+                        $('#viewItemModal').modal('show');
+                    }
+                    $("#loading").hide();
+                },
+                error: function () {
+                    $("#loading").hide();
+                }
+            });
+        },
+        menuPeriodsChangedEvent: document.createEvent('Event'),
+        menuItemsChangedEvent: document.createEvent('Event'),
+        menuItemsFilteredEvent: document.createEvent('Event'),
+        onSuccess: function (result) {
+            $("#menusContent").html(result);
+            $("#menusContent").trigger('menuItemsChanged');
+            $('#dailyMenuButton, #weeklyMenuButton').trigger('periodsChanged');
+        }
+    };
+
+    menus.menuPeriodsChangedEvent.initEvent('periodsChanged', true, false);
+    menus.menuItemsChangedEvent.initEvent('menuItemsChanged', true, false);
+    menus.menuItemsFilteredEvent.initEvent('menuItemsFiltered', true, false);
+    menus.getMenuCalendar();
+
+    //* pass focus back to saved element after modal is closed
+    $(document).on('hidden.bs.modal', '#viewItemModal', function () {
+        $(menus.focused).focus();
+    });
+
+</script>
+
+</div>
+<div class="row">
+    
+
+    <div class="col-xs-12">
+        <p class="location__advice">2,000 calories a day is used for general nutrition advice, but calorie needs vary. Additional nutrition information available upon request.</p>
+    </div>
+
+</div>
+<hr/>
+<div class="row">
+    <div class="col-sm-4">
+            <div id="contactUs" class="location__contacts">
+        <h2 class="location-headers">Contact Us</h2>
+        <span>Questions? We&#39;re here to help!</span>
+        <ul class="location__contacts unstyled">
+                <li class="contact">
+                    <div class="disclaimer">Location Manager</div>
+
+                    <div class="contact__name">
+                        John Dunn
+                    </div>
+                        <a class="contact__email" href="mailto:dunn-john@aramark.com">
+                            dunn-john@aramark.com
+                        </a>
+                                       <div class="contact__phone">
+                        <a href="tel:(864) 656-2276">(864) 656-2276</a>
+                    </div>
+
+                   
+                </li>
+                <li class="contact">
+                    <div class="disclaimer">Chef</div>
+
+                    <div class="contact__name">
+                        Adam Floyd
+                    </div>
+                        <a class="contact__email" href="mailto:floyd-adam@aramark.com">
+                            floyd-adam@aramark.com
+                        </a>
+                                       <div class="contact__phone">
+                        <a href="tel:(864) 656-2276">(864) 656-2276</a>
+                    </div>
+
+                   
+                </li>
+        </ul>
+    </div>
+
+    </div>
+    <div class="col-sm-4">
+        
+    <div id="findUs" class="location__map">
+        <h2 class="location-headers">Find Us</h2>
+        <p>
+            1 Bryan Circle
+                        <br />Clemson, SC 29634
+        </p>
+        <svg class="svg directions" viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+            <path d="M14,14.5V12H10V15H8V11A1,1 0 0,1 9,10H14V7.5L17.5,11M21.71,11.29L12.71,2.29H12.7C12.31,1.9 11.68,1.9 11.29,2.29L2.29,11.29C1.9,11.68 1.9,12.32 2.29,12.71L11.29,21.71C11.68,22.09 12.31,22.1 12.71,21.71L21.71,12.71C22.1,12.32 22.1,11.68 21.71,11.29Z" />
+        </svg>
+        <div class="location__address">
+            <a href="http://maps.google.com/?q=1+Bryan+Circle+++Clemson%2c+SC+29634" target="_blank">
+                Map &amp; Directions
+            </a>
+        </div>
+    </div>
+
+    </div>
+    <div class="col-sm-4">
+            <div id="voc" class="location__feedback">
+        <div class="location__survey">
+            <span><img src="/-/media/Local/Higher-Education/IT/Main/Images/Location-Feedback/YourVoiceCounts.ashx?h=414&amp;la=en&amp;w=480&amp;hash=46C8F0BA613460562E770E1DAEE0531B732C0E80" alt="Your Voice Counts Survey" width="480" height="414" DisableWebEdit="False" /></span>
+            <p>
+                We love hearing your feedback. Tell us about your experience — 
+                <a href="http://survey.medallia.com/aramark-dining?res_flag=1&amp;UID=SL0002578&amp;ctry=USA&amp;source=WEB-DISH" target="_blank">take our survey.</a>
+            </p>
+        </div>
+    </div>
+
+    </div>
+</div>
+
+
+<div class="modal fade" tabindex="-1" id="userNotLoggedInModal" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content" role="dialog" aria-labelledby="userNotLoggedInLabel" aria-describedby="dialog_descrp">
+            <div class="modal-header">
+                <span tabindex="0" class="modal-title" autofocus id="userNotLoggedInLabel">Add to favorites</span>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body">
+                <p id="dialog_descrp">You will need to login or register for an account in order to save favorite locations.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn outline" data-dismiss="modal">OK</button>
+                <button type="button" class="btn solid" data-dismiss="modal" onclick="location.href='/Login'">Login/Create Account</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="AddToCartModal" tabindex="0" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span tabindex="0" class="modal-title" autofocus>Add to cart</span>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>                
+            </div>
+            <div class="modal-body">
+                <p></p>
+            </div>
+            <div class="modal-footer">
+                <a id="cartBtnUrl" class="btn btn--outline" data-dismiss="modal">Proceed to cart</a>
+                <a id="shoppingBtnUrl" class="btn btn--outline" data-dismiss="modal">Continue shopping</a>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+    </main>
+
+
+    
+
+</div>
+
+
+
+<footer class="footer bg-dark">
+    <div class="container">
+        <div class="row">
+            
+<div class="col-xs-12">
+    
+
+<div class="primaryMenu">
+    <nav aria-label="footer">
+
+
+
+<ul class="unstyled navigation">
+                    <li>
+                        <a class="navigation__link" href="/LocationsAndMenus">
+                            Locations &amp; Menus
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navigation__link" href="/HealthAndWellness">
+                            Health &amp; Wellness
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navigation__link" href="/MealPlans">
+                            Meal Plans
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navigation__link" href="/Sustainability">
+                            Sustainability
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navigation__link" href="/Catering">
+                            Catering
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navigation__link" href="/ContactUs">
+                            Contact Us
+                        </a>
+                    </li>
+        </ul>
+    </nav>
+</div>
+
+<script>
+    $('#signOutButton').on('click',
+        function () {
+            location.href = '/api/accounts/logout';
+        })
+</script>
+<div class="secondaryMenu">
+    <ul class="unstyled navigation">
+<li>
+                    <a href="/CarePackages" target="_blank">
+                        Care Packages
+                    </a>
+                </li>
+<li>
+                    <a href="/TermsOfUse" target="">
+                        Terms Of Use
+                    </a>
+                </li>
+<li>
+                    <a href="/Privacy" target="">
+                        Privacy
+                    </a>
+                </li>
+<li>
+                    <a href="/Sitemap" target="">
+                        Sitemap
+                    </a>
+                </li>
+    </ul>
+    
+</div>
+    <div class="socialMedia">
+        <div><h3 class="socialMedia__title">Connect With Us On</h3></div>
+        <ul class="unstyled socialMedia__links">
+                <li><a href="https://www.facebook.com/ClemsonDining" target="_blank"><img src="/-/media/Feature/SocialMedia/SocialLinks/Facebook.ashx?h=24&amp;w=24&amp;hash=63EE4787E4A543B36028916A136A3AA675152836" alt="Facebook"/></a></li>
+                <li><a href="https://www.instagram.com/clemsondining" target="_blank"><img src="/-/media/Feature/SocialMedia/SocialLinks/Instagram.ashx?h=24&amp;w=24&amp;hash=A9E2F92ACF7FD240474F77BF86E8AE8BCD621BC4" alt="Instagram"/></a></li>
+                <li><a href="https://twitter.com/ClemsonDining" target="_blank"><img src="/-/media/Feature/SocialMedia/SocialLinks/Twitter.ashx?h=24&amp;w=24&amp;hash=F4EA02A5A6F3A3FDB945BFF46EC540DF6A2DE5C1" alt="Twitter"/></a></li>
+        </ul>
+    </div>
+
+    
+
+
+<small class="copyright">
+    &#169; Aramark 2018
+</small>
+</div>
+
+        </div>
+    </div>
+</footer>
+
+<div id="loading" role="alert">
+    <img src="/Assets/Images/ajax-loader.gif" alt="Loading..." />
+</div>
+
+<script src="/Assets/Scripts/addtohomescreen.js"></script>
+<script src="/Assets/Scripts/Aramark.ACP.Main.Website.Forms.js"></script>
+<script src="/Assets/Scripts/Aramark.ACP.Project.Main.js"></script>
+<script src="/Assets/Scripts/Aramark.ACP.Feature.Language.js"></script>
+<script src="/Assets/Scripts/Aramark.ACP.Feature.Navigation.Navigation.js"></script>
+<script src="/Assets/Scripts/Aramark.ACP.Feature.Locations.FavoritesManagement.js"></script>
+<script src="/Assets/Scripts/flickity.pkgd.js"></script>
+<script src="/Assets/Scripts/flickity-config.js"></script>
+<script src="/Assets/Scripts/Aramark.ACP.Project.Main.FancySelectMenus.js"></script>
+<script src="/Assets/Scripts/Aramark.ACP.Feature.Locations.js"></script>
+<script src="/Assets/Scripts/moment.2.18.1.js"></script>
+<script src="/Assets/Scripts/DateRangePicker/date-range-picker.2.1.25.js"></script>
+<script src="/Assets/Scripts/datepicker.js"></script>
+<script src="/Assets/Scripts/polyfills.js"></script>
+<script src="/Assets/Scripts/Aramart.ACP.Foundation.Product.js"></script>
+
+
+</body>
+</html>
