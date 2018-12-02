@@ -1,5 +1,7 @@
 from dining import *
 
+with open("buildID", 'r') as build_id:
+    print("[INFO] This build's ID is:", build_id.readline())
 
 def returnSpeech(speech, endSession=True):
     return {
@@ -13,21 +15,6 @@ def returnSpeech(speech, endSession=True):
             "shouldEndSession": endSession
           }
     }
-
-def get_url(dining_hall):
-
-    print("dining hall: {}".format(dining_hall))
-
-    url = ""
-
-    if dining_hall == "core":
-        url = CORE if ONLINE else INFILE_CORE
-    elif dining_hall == "schilletter":
-        url = SCHILLETTER if ONLINE else INFILE_SCH
-    else: 
-        print ("[WARN] Could not get URL for dining hall!")
-    
-    return url
 
 def on_intent(intent_request, session):
     
@@ -50,11 +37,14 @@ def on_intent(intent_request, session):
             for station in stations:
                 output += station.speak()
 
+
+            print("[INFO] Output is: \"{}\"".format(output))
+
             return output
 
         else:
             print("[INFO] Detected that this dining location is CLOSED.")
-            return CLOSED
+            return CLOSED.format(dining_hall)
     
     elif intent_name == "get_station_menu":
 
@@ -85,7 +75,7 @@ def on_intent(intent_request, session):
         
         else:
             print("[INFO] Detected that this dining location is CLOSED.")
-            return CLOSED
+            return CLOSED.format(dining_hall)
     
                 
 
