@@ -2,7 +2,7 @@ upload.zip
 
 .vscode/
 *.pyc
-
+buildID
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
