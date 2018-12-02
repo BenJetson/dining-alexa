@@ -25,23 +25,24 @@ def get_url(dining_hall):
     elif dining_hall == "schilletter":
         url = SCHILLETTER if ONLINE else INFILE_SCH
     else: 
-        print ("AACK")
+        print ("[WARN] Could not get URL for dining hall!")
     
     return url
 
 def on_intent(intent_request, session):
-    # This means the person asked the skill to do an action
+    
     intent_name = intent_request["intent"]["name"]
-    # This is the name of the intent (Defined in the Alexa Skill Kit)
+    
     if intent_name == 'get_menu':
 
-        dining_hall = intent_request["intent"]["slots"]["dining_hall"]["value"]
+        print("[INFO] Detected that this intent calls for FULL MENU.")
 
+        dining_hall = intent_request["intent"]["slots"]["dining_hall"]["value"]
         url = get_url(dining_hall)
-        
         page = fetch_page(url)
         
         if is_open(page):
+
             stations = parse_stations(page)
 
             output = "Today, {} has the following: ".format(dining_hall)
@@ -50,25 +51,31 @@ def on_intent(intent_request, session):
                 output += station.speak()
 
             return output
+
         else:
+            print("[INFO] Detected that this dining location is CLOSED.")
             return CLOSED
     
     elif intent_name == "get_station_menu":
 
-        dining_hall = intent_request["intent"]["slots"]["dining_hall"]["value"]
+        print("[INFO] Detected that this intent calls for STATION MENU.")
 
+        dining_hall = intent_request["intent"]["slots"]["dining_hall"]["value"]
         url = get_url(dining_hall)
-        
         page = fetch_page(url)
         
         if is_open(page):
+
+            print("[INFO] Detected that this dining locatin is OPEN.")
+
             stations = parse_stations(page)
 
             query = intent_request["intent"]["slots"]["station"]["value"]
-            print("QUERY: {}".format(query))
+
+            print("[INFO] User wants information about station with value \"{}\"".format(query))
 
             for station in stations:
-                # if station.id == intent_request["intent"]["slots"]["station"]["resolutions"]["resolutionsPerAuthority"][0]["values"][0][""]
+                # TODO: Fix discrepancies between station value and slot value to avoid extra conditions
                 if (station.value == query or 
                     (query == "salad bar" and station.value == "salad") or
                     (query == "dessert bar" and station.value == "dessert")):
@@ -77,6 +84,7 @@ def on_intent(intent_request, session):
             return STATION_NO_MATCH.format(query)
         
         else:
+            print("[INFO] Detected that this dining location is CLOSED.")
             return CLOSED
     
                 
@@ -88,16 +96,17 @@ def on_intent(intent_request, session):
 def lambda_handler(event, context):
 
     request_type = event["request"]["type"]
-    print(request_type)
-    print(request_type == "IntentRequest")
+    print("[INFO] The type of this request is:", request_type)
+    print("[INFO] Is this request an intent?", request_type == "IntentRequest")
 
     if request_type == "LaunchRequest":
+        print("[INFO] Detected that this is a LAUNCH request.")
         speech = BANNER
     
 
     elif request_type == "IntentRequest":
         speech = on_intent(event["request"], event["session"])
-        print("INTENT")
+        print("[INFO] Detected that this is an INTENT request")
 
     else:
         return {
@@ -123,7 +132,7 @@ def lambda_handler(event, context):
     
     
     
-    print(speech)
+    print("[INFO] Returning the following speech:\n", speech)
     
 
     return returnSpeech(speech)

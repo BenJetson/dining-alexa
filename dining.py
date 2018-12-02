@@ -101,10 +101,8 @@ INFILE_SCH  = "sch-lunch.html"
 
 ONLINE = True
 
-# url = CORE if ONLINE else INFILE
-
-# if not ONLINE:
-#     print("\n***RUNNING OFFLINE***\n")
+if ONLINE: print("[INFO] The application is running in ONLINE mode.")
+else: print("[WARN] The application is running in OFFLINE mode.")
 
 def fetch_page(url):
     
@@ -116,6 +114,9 @@ def fetch_page(url):
         status, response = http.request(url)
         return response
     except ValueError:
+        # This catches the exception from .index()
+        # Usually this happens because in OFFLINE mode
+        #   and we open the file from disk instead below.
         return open(url)
 
 def is_open(input):
@@ -131,7 +132,6 @@ def parse_stations(input):
 
     stations_html = page.select("div.menu__station")
     stations = []
-
 
     for html in stations_html:
         
