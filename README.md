@@ -2,6 +2,9 @@
 Find out what's on the menu at Clemson's dining halls.
 
 ### Awards
+
+![image](https://user-images.githubusercontent.com/10427974/49342973-d5765d00-f62f-11e8-9dd9-494ef3c464f6.png)
+
 This project won `Best Software Hack` at the CUHackIt Hello World 2018 hackathon!  
 [See this project on DevPost](https://devpost.com/software/clemson-dining-alexa-skill)
 
