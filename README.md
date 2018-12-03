@@ -15,10 +15,10 @@ This project won `Best Software Hack` at the CUHackIt Hello World 2018 hackathon
 
 You can ask Alexa about the overall menu for a campus dining location or for just a single station at a specific location.
 
-![utterance_core_menu](https://user-images.githubusercontent.com/10427974/49389224-c527b600-f6f3-11e8-86c6-48894d9a2358.png)
-![utterance_core_station_pasta](https://user-images.githubusercontent.com/10427974/49389225-c527b600-f6f3-11e8-97ba-817933fb5e64.png)
-![utterance_schilletter_menu](https://user-images.githubusercontent.com/10427974/49389226-c527b600-f6f3-11e8-8f4a-fc1be9ac3130.png)
-![utterance_schilletter_station_grill](https://user-images.githubusercontent.com/10427974/49389227-c527b600-f6f3-11e8-8209-e752ee2fed30.png)
+![utterance_core_menu](https://user-images.githubusercontent.com/10427974/49389386-28194d00-f6f4-11e8-9f41-e0eb4bb72795.png)
+![utterance_core_station_pasta](https://user-images.githubusercontent.com/10427974/49389387-28194d00-f6f4-11e8-9495-48ea3b570ff6.png)
+![utterance_schilletter_menu](https://user-images.githubusercontent.com/10427974/49389388-28194d00-f6f4-11e8-9ce7-a3dede896f97.png)
+![utterance_schilletter_station_grill](https://user-images.githubusercontent.com/10427974/49389389-28194d00-f6f4-11e8-9613-cfd558d149f4.png)
 
 
 #### Phrases
