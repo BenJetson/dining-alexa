@@ -46,6 +46,7 @@ The Douthit Hills Hub is not supported at this time.
 
 |		Stations at Core:	|	Stations at Schilletter:	|
 |		:---:	|	:---:	|
+|&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;|&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;|
 |`		Deli	`|`	Fresh Focus	`|
 |`		Dessert	`|`	Deli	`|
 |`		Entree Station	`|`	Grill	`|
@@ -57,4 +58,4 @@ The Douthit Hills Hub is not supported at this time.
 |`		Salad	`|`	Soup	`|
 |`		Soup	`|`	Taste of Home	`|
 |			|`	Vegetarian	`|
-|&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;|&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;|
+
