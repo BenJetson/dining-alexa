@@ -44,17 +44,17 @@ The Douthit Hills Hub is not supported at this time.
 
 ##### Stations
 
-<table>
-  <tr>	<th>Stations at Core:</th>	<th>Stations at Schilletter:</th>	</tr>
-  <tr>	<td>Deli</td>	<td>Fresh Focus</td>	</tr>
-  <tr>	<td>Dessert</td>	<td>Deli</td>	</tr>
-  <tr>	<td>Entree Station</td>	<td>Grill</td>	</tr>
-  <tr>	<td>Grill</td>	<td>Pizza</td>	</tr>
-  <tr>	<td>Lite-sy Corner</td>	<td>Salad Bar</td>	</tr>
-  <tr>	<td>Mongolian Grill</td>	<td>Dessert</td>	</tr>
-  <tr>	<td>Pasta</td>	<td>Mongolian</td>	</tr>
-  <tr>	<td>Pizza</td>	<td>Saute</td>	</tr>
-  <tr>	<td>Salad</td>	<td>Soup</td>	</tr>
-  <tr>	<td>Soup</td>	<td>Taste of Home</td>	</tr>
-  <tr>	<td></td>	<td>Vegetarian</td>	</tr>
+<table>			
+    <tr>	<th>Stations at Core:</th>	<th>Stations at Schilletter:</th>	</tr>
+    <tr>	<td><code>Deli</code></td>	<td><code>Fresh Focus</code></td>	</tr>
+    <tr>	<td><code>Dessert</code></td>	<td><code>Deli</code></td>	</tr>
+    <tr>	<td><code>Entree Station</code></td>	<td><code>Grill</code></td>	</tr>
+    <tr>	<td><code>Grill</code></td>	<td><code>Pizza</code></td>	</tr>
+    <tr>	<td><code>Lite-sy Corner</code></td>	<td><code>Salad Bar</code></td>	</tr>
+    <tr>	<td><code>Mongolian Grill</code></td>	<td><code>Dessert</code></td>	</tr>
+    <tr>	<td><code>Pasta</code></td>	<td><code>Mongolian</code></td>	</tr>
+    <tr>	<td><code>Pizza</code></td>	<td><code>Saute</code></td>	</tr>
+    <tr>	<td><code>Salad</code></td>	<td><code>Soup</code></td>	</tr>
+    <tr>	<td><code>Soup</code></td>	<td><code>Taste of Home</code></td>	</tr>
+    <tr>	<td></td>	<td><code>Vegetarian</code></td>	</tr>
 </table>
