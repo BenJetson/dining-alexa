@@ -1,12 +1,14 @@
 # (Unofficial) Clemson Dining Alexa Skill
 Find out what's on the menu at Clemson's dining halls.
 
+### Get the Skill
+
+[![image](https://user-images.githubusercontent.com/10427974/49385079-7de8f780-f6ea-11e8-869e-eb74c0859c50.png)](https://www.amazon.com/gp/product/B07L342K1S)
+
+
 ### Awards
 
-<a href="https://www.amazon.com/gp/product/B07L342K1S">
- <img src="https://user-images.githubusercontent.com/10427974/49342973-d5765d00-f62f-11e8-9dd9-494ef3c464f6.png"
-      alt="Just Ask Amazon Alexa Logo">
-</a>
+![image](https://user-images.githubusercontent.com/10427974/49342973-d5765d00-f62f-11e8-9dd9-494ef3c464f6.png)
 
 This project won `Best Software Hack` at the CUHackIt Hello World 2018 hackathon!  
 [See this project on DevPost](https://devpost.com/software/clemson-dining-alexa-skill)
