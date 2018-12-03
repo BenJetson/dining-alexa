@@ -2,9 +2,7 @@
 Find out what's on the menu at Clemson's dining halls.
 
 
-<a href="https://www.amazon.com/gp/product/B07L342K1S">
-    ![image](https://user-images.githubusercontent.com/10427974/49385079-7de8f780-f6ea-11e8-869e-eb74c0859c50.png)
-</a>
+[![image](https://user-images.githubusercontent.com/10427974/49385079-7de8f780-f6ea-11e8-869e-eb74c0859c50.png)](https://www.amazon.com/gp/product/B07L342K1S)
 
 ### Awards
 
