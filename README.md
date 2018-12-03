@@ -23,12 +23,13 @@ You can ask Alexa about the overall menu for a campus dining location or for jus
 
 #### Phrases
 * Get the whole menu
-  * `Alexa, ask Tiger Dining what does {dining_hall} have on the menu today.`
-  * `Alexa, ask Tiger Dining what is {dining_hall} serving today`
+  * Alexa, ask Tiger Dining what does `{dining location}` have on the menu today.
+  * Alexa, ask Tiger Dining what `{dining location}` serving today
 * Get the menu for a specific station
-  * `Alexa, ask Tiger Dining what does the {station} at {dining_hall} have today`
-  * `Alexa, ask Tiger Dining what's at the {station} at {dining_hall}`
-  * `Alexa, ask Tiger Dining what's on the {station} at {dining_hall}`
+  * Alexa, ask Tiger Dining what the `{station}` at `{dining location}` is serving today.
+  * Alexa, ask Tiger Dining what does the `{station}` at `{dining location}` have today
+  * Alexa, ask Tiger Dining what's at the `{station}` at `{dining location}`
+  * Alexa, ask Tiger Dining what's on the `{station}` at `{dining location}`
 
 ##### Dining Halls
 Supports both `Core` and `Schilletter`.
