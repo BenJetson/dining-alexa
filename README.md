@@ -24,7 +24,7 @@ You can ask Alexa about the overall menu for a campus dining location or for jus
 #### Phrases
 * Get the whole menu
   * Alexa, ask Tiger Dining what does `{dining location}` have on the menu today.
-  * Alexa, ask Tiger Dining what `{dining location}` serving today
+  * Alexa, ask Tiger Dining what `{dining location}` is serving today
 * Get the menu for a specific station
   * Alexa, ask Tiger Dining what the `{station}` at `{dining location}` is serving today.
   * Alexa, ask Tiger Dining what does the `{station}` at `{dining location}` have today
