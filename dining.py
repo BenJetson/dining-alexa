@@ -38,6 +38,7 @@ class Station:
         "Regional 1": "regional1",
         "Regional 2": "regional2",
         "Regional 3": "regional3",
+        "Theme Meal": "theme"
 
 
         "Fresh Focus": "freshfocus",
