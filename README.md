@@ -1,14 +1,12 @@
 # (Unofficial) Clemson Dining Alexa Skill
 Find out what's on the menu at Clemson's dining halls.
 
-### Get the Skill
 
-[![image](https://user-images.githubusercontent.com/10427974/49385079-7de8f780-f6ea-11e8-869e-eb74c0859c50.png)](https://www.amazon.com/gp/product/B07L342K1S)
-
+<a href="https://www.amazon.com/gp/product/B07L342K1S">
+    ![image](https://user-images.githubusercontent.com/10427974/49385079-7de8f780-f6ea-11e8-869e-eb74c0859c50.png)
+</a>
 
 ### Awards
-
-![image](https://user-images.githubusercontent.com/10427974/49342973-d5765d00-f62f-11e8-9dd9-494ef3c464f6.png)
 
 This project won `Best Software Hack` at the CUHackIt Hello World 2018 hackathon!  
 [See this project on DevPost](https://devpost.com/software/clemson-dining-alexa-skill)
@@ -17,16 +15,20 @@ This project won `Best Software Hack` at the CUHackIt Hello World 2018 hackathon
 
 You can ask Alexa about the overall menu for a campus dining location or for just a single station at a specific location.
 
+![utterance_core_menu](https://user-images.githubusercontent.com/10427974/49389224-c527b600-f6f3-11e8-86c6-48894d9a2358.png)
+![utterance_core_station_pasta](https://user-images.githubusercontent.com/10427974/49389225-c527b600-f6f3-11e8-97ba-817933fb5e64.png)
+![utterance_schilletter_menu](https://user-images.githubusercontent.com/10427974/49389226-c527b600-f6f3-11e8-8f4a-fc1be9ac3130.png)
+![utterance_schilletter_station_grill](https://user-images.githubusercontent.com/10427974/49389227-c527b600-f6f3-11e8-8209-e752ee2fed30.png)
+
+
 #### Phrases
 * Get the whole menu
-  * `what does {dining_hall} have on the menu today`
-  * `what is {dining_hall} serving today`
+  * `Alexa, ask Tiger Dining what does {dining_hall} have on the menu today.`
+  * `Alexa, ask Tiger Dining what is {dining_hall} serving today`
 * Get the menu for a specific station
-  * `what's at the {station} bar at {dining_hall}`
-  * `what's on the {station} bar at {dining_hall}`
-  * `what does the {station} at {dining_hall} have today`
-  * `what's at the {station} at {dining_hall}`
-  * `what's on the {station} at {dining_hall}`
+  * `Alexa, ask Tiger Dining what does the {station} at {dining_hall} have today`
+  * `Alexa, ask Tiger Dining what's at the {station} at {dining_hall}`
+  * `Alexa, ask Tiger Dining what's on the {station} at {dining_hall}`
 
 ##### Dining Halls
 Supports both `Core` and `Schilletter`.
