@@ -38,8 +38,9 @@ You can ask Alexa about the overall menu for a campus dining location or for jus
   * Alexa, ask Tiger Dining what's at the `{station}` at `{dining location}`
   * Alexa, ask Tiger Dining what's on the `{station}` at `{dining location}`
 
-##### Dining Halls
-Supports both `Core` and `Schilletter`.
+##### Dining Locations
+The skills supports both of Clemson's dining halls, `Core` and `Schilletter`.
+The Douthit Hills Hub is not supported at this time.
 
 ##### Stations
 
