@@ -44,16 +44,16 @@ The Douthit Hills Hub is not supported at this time.
 
 ##### Stations
 
-|	Stations at Core:	|	Stations at Schilletter:	|
-|	:---:	|	:---:	
-|	Deli	|	Fresh Focus	|
-|	Dessert	|	Deli	|
-|	Entree Station	|	Grill	|
-|	Grill	|	Pizza	|
-|	Lite-sy Corner	|	Salad Bar	|
-|	Mongolian Grill	|	Dessert	|
-|	Pasta	|	Mongolian	|
-|	Pizza	|	Saute	|
-|	Salad	|	Soup	|
-|	Soup	|	Taste of Home	|
-|		|	Vegetarian	|
+|		Stations at Core:	|	Stations at Schilletter:	|
+|		:---:	|	:---:	|
+|`		Deli	`|`	Fresh Focus	`|
+|`		Dessert	`|`	Deli	`|
+|`		Entree Station	`|`	Grill	`|
+|`		Grill	`|`	Pizza	`|
+|`		Lite-sy Corner	`|`	Salad Bar	`|
+|`		Mongolian Grill	`|`	Dessert	`|
+|`		Pasta	`|`	Mongolian	`|
+|`		Pizza	`|`	Saute	`|
+|`		Salad	`|`	Soup	`|
+|`		Soup	`|`	Taste of Home	`|
+|			|`	Vegetarian	`|
