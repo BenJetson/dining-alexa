@@ -57,3 +57,4 @@ The Douthit Hills Hub is not supported at this time.
 |`		Salad	`|`	Soup	`|
 |`		Soup	`|`	Taste of Home	`|
 |			|`	Vegetarian	`|
+|<img width=200>|<img width=200>|
