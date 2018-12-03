@@ -1,6 +1,13 @@
-# (Unofficial) Clemson Dining Alexa Skill
-Find out what's on the menu at Clemson's dining halls.
+# Tiger Dining Skill for Amazon Alexa
+An unofficial skill to find out what's on the menu at Clemson's dining halls.
 
+### To get the skill, just ask Alexa!
+
+[![utterance_get_skill](https://user-images.githubusercontent.com/10427974/49395892-b8ac5900-f705-11e8-989a-e371a32521b3.png)](https://www.amazon.com/gp/product/B07L342K1S)
+
+#### Alternatively, you can enable the skill from the Amazon website.
+
+Click the button below to [view Tiger Dining at Amazon.com](https://www.amazon.com/gp/product/B07L342K1S).
 
 [![Just Ask Amazon Alexa Logo](https://user-images.githubusercontent.com/10427974/49385079-7de8f780-f6ea-11e8-869e-eb74c0859c50.png)](https://www.amazon.com/gp/product/B07L342K1S)
 
