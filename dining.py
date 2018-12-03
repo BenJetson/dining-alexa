@@ -115,7 +115,7 @@ INFILE_CLOSED = "closed-schilletter.html"
 
 # Fetch and parse the webpage, either from the internet or locally if testing
 
-ONLINE = False
+ONLINE = True
 
 if ONLINE: print("[INFO] The application is running in ONLINE mode.")
 else: print("[WARN] The application is running in OFFLINE mode.")
