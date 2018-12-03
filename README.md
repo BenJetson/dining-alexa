@@ -44,17 +44,16 @@ The Douthit Hills Hub is not supported at this time.
 
 ##### Stations
 
-<table>			
-    <tr>	<th>Stations at Core:</th>	<th>Stations at Schilletter:</th>	</tr>
-    <tr>	<td><code>Deli</code></td>	<td><code>Fresh Focus</code></td>	</tr>
-    <tr>	<td><code>Dessert</code></td>	<td><code>Deli</code></td>	</tr>
-    <tr>	<td><code>Entree Station</code></td>	<td><code>Grill</code></td>	</tr>
-    <tr>	<td><code>Grill</code></td>	<td><code>Pizza</code></td>	</tr>
-    <tr>	<td><code>Lite-sy Corner</code></td>	<td><code>Salad Bar</code></td>	</tr>
-    <tr>	<td><code>Mongolian Grill</code></td>	<td><code>Dessert</code></td>	</tr>
-    <tr>	<td><code>Pasta</code></td>	<td><code>Mongolian</code></td>	</tr>
-    <tr>	<td><code>Pizza</code></td>	<td><code>Saute</code></td>	</tr>
-    <tr>	<td><code>Salad</code></td>	<td><code>Soup</code></td>	</tr>
-    <tr>	<td><code>Soup</code></td>	<td><code>Taste of Home</code></td>	</tr>
-    <tr>	<td></td>	<td><code>Vegetarian</code></td>	</tr>
-</table>
+|	Stations at Core:	|	Stations at Schilletter:	|
+|	:---:	|	:---:	
+|	Deli	|	Fresh Focus	|
+|	Dessert	|	Deli	|
+|	Entree Station	|	Grill	|
+|	Grill	|	Pizza	|
+|	Lite-sy Corner	|	Salad Bar	|
+|	Mongolian Grill	|	Dessert	|
+|	Pasta	|	Mongolian	|
+|	Pizza	|	Saute	|
+|	Salad	|	Soup	|
+|	Soup	|	Taste of Home	|
+|		|	Vegetarian	|
