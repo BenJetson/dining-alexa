@@ -110,9 +110,9 @@ STATION_NO_MATCH = "Sorry, I couldn't find a station that matches the name {}"
 
 CORE          = "https://clemson.campusdish.com/LocationsAndMenus/FreshFoodCompany"
 SCHILLETTER   = "https://clemson.campusdish.com/LocationsAndMenus/SchilletterDiningHall"
-INFILE_CORE   = "lunch-core.html"
-INFILE_SCH    = "lunch-schilletter.html"
-INFILE_CLOSED = "closed-schilletter.html"
+INFILE_CORE   = "test_html/lunch-core.html"
+INFILE_SCH    = "test_html/lunch-schilletter.html"
+INFILE_CLOSED = "test_html/closed-schilletter.html"
 
 # Fetch and parse the webpage, either from the internet or locally if testing
 
